@@ -1,0 +1,51 @@
+.Login {
+    margin: 0;
+    background-color: #3474EB;
+    z-index: 1;
+    background-image: url(../img/Vector.png);
+    background-size: cover; /* Ensure the image covers the entire div */
+    background-position: center; /* Center the image */
+    min-height: 100vh; /* Ensure the div takes up the full height of the viewport */
+    position: relative; /* Ensures z-index works */
+}
+
+
+.containers {
+    background-color: #FFFFFF;
+    width: 400px;
+    /* height: 350px; */
+    border-radius: 30px !important;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    border-radius: 10px;
+}
+
+.input-section {
+    border-radius: 10px;
+    padding: 18px;
+}
+
+.input-section input {
+    background-color: #EDF3FF;
+    border-radius: 5px;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc; /* Added border */
+}
+
+.LOGINBTN {
+    background-color: #3474EB;
+    color: #FFFFFF;
+    border: none;
+    width: 100%;
+    padding: 15px;
+    cursor: pointer;
+}
+  
+.LOGINBTN:hover {
+    background-color: #759de6;
+}

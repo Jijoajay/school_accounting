@@ -1,0 +1,73 @@
+:root{
+    --primary-color:#759de6;
+    --secondary-color:#3474eb;
+    --third-color:#EDF3FF;
+    --fourth-color:#E6EFFF;
+}
+
+.import-page{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    height: auto;
+    padding: 20px;
+    width: auto;
+    border: 1px solid #eee;
+    border-radius: 25px;
+    transition: .5s ease-in-out;
+}
+.import-head{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items:center;
+}
+.download-btn,
+.import-btn{
+    background-color: var(--primary-color);
+    border: 2px solid white;
+    color: white;
+    border-radius: 25px;
+    padding: 10px 15px;
+    transition: .5s ease-in-out;
+}
+.download-btn:hover,
+.import-btn:hover{
+    background-color: white;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+
+}
+.sample-table {
+    width: 100%;              
+    overflow-x: auto;         
+    height: auto;           
+    box-sizing: border-box;   
+}
+
+.sample-table table {
+    width: 100%;             
+    table-layout: auto;       
+    border-collapse: separate;
+}
+
+.sample-table table thead th{
+    padding: 5px;
+    font-size: 14px;
+}
+.sample-table table tbody td {
+    font-size: 12px;
+}
+.import-cont{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.input-cont{
+    display: flex;
+    flex-direction: column;
+}
+ul {
+    list-style-type: upper-roman;
+  }

@@ -179,7 +179,7 @@ function Journaladd({ open, onClose, initialData }) {
                     onChange={handleInputChange}
                   >
                     <option value="">Select Sub Account Head</option>
-                    {subAccountHeads.map((subAccountHead, index) => (
+                    {subAccountHeads?.map((subAccountHead, index) => (
                       <option key={index} value={subAccountHead}>
                         {subAccountHead}
                       </option>

@@ -281,7 +281,7 @@ function AccountMaster() {
                   </td>
                   <td>{getDate(account?.createdAt)}</td>
                   <td>{account.accountHead}</td>
-                  <td>{account.subAccountHead || "N/A"}</td>
+                  <td>{account?.subAccountHead.toString() || "N/A"}</td>
                   <td>
                     <div className="d-flex">
                       <LuPenLine

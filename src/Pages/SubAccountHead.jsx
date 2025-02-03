@@ -30,7 +30,7 @@ export const SubAccountHead = ({onSelect, isTitle=true}) => {
         >
             <option value="" style={{textTransform:'capitalize'}}>All</option>
             {
-                subAccountHeads.map((subAccountHead, index) => (
+                subAccountHeads?.map((subAccountHead, index) => (
                     <option value={subAccountHead} key={index} style={{textTransform:'capitalize'}}>{subAccountHead}</option>
                 ))
             }

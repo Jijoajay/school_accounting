@@ -12,7 +12,7 @@ const useAccountHeads = () => {
             request.get("getAccountMasterWithoutLimit")
                 .then((response) => {
                     const data = response.data.data; 
-                    const uniqueAccountHeads = [...new Set(data.map(account => account.accountHead))];
+                    const uniqueAccountHeads = [...new Set(data.map(account => account?.accountHead))];
                     setAccountHeads(uniqueAccountHeads);
                 })
                 .catch((err) => {
@@ -28,7 +28,7 @@ const useAccountHeads = () => {
             const fetchSubAccountHead = async()=>{
                 try {
                     const response = await request.get(`getSubAccountByHead/${selectedHead}`)
-                    setSubAccountHeads(response.data.data)
+                    setSubAccountHeads(response?.data?.data)
                     console.log("subAccountHead",response.data )
                 } catch (error) {
                     console.log("error while getting the subAccountHead", error.message)

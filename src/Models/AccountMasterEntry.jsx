@@ -21,11 +21,9 @@ function AccountMasterEntry({ open, onClose }) {
     e.preventDefault();
 
     setErrors({ accountHead: "", subAccountHead: "" });
-    // Validate sub-account head input
 
     let isValid = true;
 
-    // Validate account head input
     if (!accountHead) {
       setErrors((prev) => ({
         ...prev,
@@ -33,8 +31,7 @@ function AccountMasterEntry({ open, onClose }) {
       }));
       isValid = false;
     }
-        // Validate sub-account head input
-    if (subAccountHead.length === 0) {
+    if (subAccountHead?.length === 0) {
       setErrors((prev) => ({
         ...prev,
         subAccountHead: "Please atleast add on sub Account Head.",
@@ -42,8 +39,7 @@ function AccountMasterEntry({ open, onClose }) {
       isValid = false;
     }
 
-    if (!isValid) return;// If not valid, exit early
-    // Prepare data for submission
+    if (!isValid) return;
 
     const data = {
       accountHead,
@@ -52,8 +48,6 @@ function AccountMasterEntry({ open, onClose }) {
     setLoading(true);
 
     try {
-            // Make API call to add account master
-
       await request.post("addAccountMaster/", data);
       setAccountHead("");
       setSubAccountHead("");
@@ -94,7 +88,7 @@ function AccountMasterEntry({ open, onClose }) {
 
   // Remove a Sub Account Head
   const removeSubAccountHead = (indexToRemove) => {
-    setSubAccountHead(subAccountHead.filter((_, index) => index !== indexToRemove));
+    setSubAccountHead(subAccountHead?.filter((_, index) => index !== indexToRemove));
   };
   return (
     <Modal show={open} onHide={onClose} size="lg" centered>
@@ -159,7 +153,7 @@ function AccountMasterEntry({ open, onClose }) {
             </Row>
             <Row>
               <Col className='py-2'>
-                  {subAccountHead?.map((subAccount, index) => (
+                  {subAccountHead && subAccountHead?.map((subAccount, index) => (
                     <div className='mt-3 me-3' key={index} style={{ display: "inline-block"}}>
                       <button
                         type="button"
